@@ -10,7 +10,7 @@
         <p id="personalMessageText">{{personalMessage}}</p>
         <div id="bilderDiv" style="width: 100%;">
             {% for x in links %}
-                <img class="bilder" src="{{x}}" alt="{{x}}">
+                <a href="{{x}}"><img class="bilder" src="{{x}}" alt="{{x}}"></a>
             {% endfor %}
         </div>
     </body>
