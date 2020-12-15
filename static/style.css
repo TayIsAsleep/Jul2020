@@ -10,7 +10,9 @@ body{
 #allBody{
     background-image: url("https://bit.ly/2KoAPIv");
     background-repeat:repeat;
-    height: 100vh;
+    display: block;
+    overflow: auto;
+    
 }
 .center{
     display: block;
