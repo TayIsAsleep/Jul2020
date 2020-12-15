@@ -17,4 +17,4 @@ def goToPage(linkInput):
         [],
         []
     ]
-    return render_template("index.html", currentName=linkInput.capitalize(), imageLink=url_for('static',filename=linkInput+'.png'), links=allImages[selected], personalMessage=allText[selected])
+    return render_template("index.html", currentName=linkInput.capitalize(), imageLink=url_for('static',filename=linkInput+'-min.png'), links=allImages[selected], personalMessage=allText[selected])
