@@ -5,7 +5,7 @@
 }
 body{
     background: rgb(112,0,0);
-    background: linear-gradient(90deg, rgba(112,0,0,1) 0%, rgba(163,0,0,1) 50%, rgba(112,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(112,0,0,1) 0%, rgba(196,0,0,1) 50%, rgba(112,0,0,1) 100%);
 }
 #allBody{
     background-image: url("https://bit.ly/2KoAPIv");
