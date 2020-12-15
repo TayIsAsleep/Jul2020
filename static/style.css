@@ -10,7 +10,6 @@ body{
 #allBody{
     background-image: url("https://bit.ly/2KoAPIv");
     background-repeat:repeat;
-    filter: blur(8px);
 }
 .center{
     display: block;
