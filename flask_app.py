@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/mamma")
 def mamma(): 
-    mammaText = "Mamma text"
+    mammaText = "God Jul till dig Mamma."
     mammaLinks = []
     return render_template("index.html", currentName="Mamma", imageLink=url_for('static', filename='mamma.png'), links=mammaLinks, personalMessage=mammaText)
 
