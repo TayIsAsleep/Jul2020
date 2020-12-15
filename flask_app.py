@@ -1,3 +1,4 @@
+#Title generator : https://bit.ly/381FdFn
 from flask import Flask,render_template,request,redirect,url_for
 app = Flask(__name__)
 
@@ -38,4 +39,3 @@ if __name__ == "__main__":
         input("ERROR : Incorrect IP")
     else:
         pass
-#Title generator : https://bit.ly/381FdFn
