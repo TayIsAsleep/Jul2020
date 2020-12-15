@@ -6,12 +6,14 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <img class="center" src="{{imageLink}}" alt="godJulText">
-        <p id="personalMessageText">{{personalMessage}}</p>
-        <div id="bilderDiv" style="width: 100%;">
-            {% for x in links %}
-                <a href="{{x}}"><img class="bilder" src="{{x}}" alt="{{x}}"></a>
-            {% endfor %}
+        <div id="allBody">
+            <img class="center" src="{{imageLink}}" alt="godJulText">
+            <p id="personalMessageText">{{personalMessage}}</p>
+            <div id="bilderDiv" style="width: 100%;">
+                {% for x in links %}
+                    <a href="{{x}}"><img class="bilder" src="{{x}}" alt="{{x}}"></a>
+                {% endfor %}
+            </div>
         </div>
     </body>
 </html>

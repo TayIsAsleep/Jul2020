@@ -6,6 +6,13 @@
 body{
     background-image: url("bgr.jpg");
     background-repeat:repeat;
+    background: rgb(143,0,0);
+    background: linear-gradient(90deg, rgba(143,0,0,1) 0%, rgba(195,0,0,1) 50%, rgba(143,0,0,1) 100%);
+}
+#allBody{
+    background-image: url("https://schools.stlucie.k12.fl.us/swc/files/2014/12/snow-transparent.gif");
+    background-repeat:repeat;
+    
 }
 .center{
     display: block;
