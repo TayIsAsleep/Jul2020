@@ -3,49 +3,14 @@
     <head>
         <title>God Jul {{currentName}}</title>
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-        <style>
-            *{
-                margin: 0px;
-                padding: 0px;
-                border: 0px;
-            }
-            body{
-                background-image: url("bgr.jpg");
-                background-repeat:repeat;
-            }
-            .center{
-                display: block;
-                margin-left: auto;
-                margin-right: auto; 
-                height: 40%;
-            }
-            #bilder *{
-                display:inline-block;
-                width: 320px;
-                height: auto;
-            }
-            #bilder{
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                text-align:center;
-            }
-            #personalMessageText{
-                text-align: center;
-                font-weight: 900;
-                font-size: 25;
-                text-shadow: 4px 2px black;
-                color: white;   
-                padding-bottom: 10px;
-            }
-        </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <img class="center" src="{{imageLink}}" alt="godJulText">
         <p id="personalMessageText">{{personalMessage}}</p>
-        <div id="bilder" style="width: 100%;">
+        <div id="bilderDiv" style="width: 100%;">
             {% for x in links %}
-                <img src="{{x}}" alt="{{x}}">
+                <img class="bilder" src="{{x}}" alt="{{x}}">
             {% endfor %}
         </div>
     </body>
