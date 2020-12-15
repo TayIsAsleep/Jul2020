@@ -9,9 +9,9 @@
     <body>
         <img class="center" src="{{ imageLink }}" alt="godJulText">
         <div id="bilder" style="width: 100%;">
-            {{ for x in links}}
+            {% for x in links %}
                 <img src="{{x}}" alt="">
-            {{ end for }}
+            {% end for %}
         </div>
     </body>
 </html>
