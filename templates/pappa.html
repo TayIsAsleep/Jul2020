@@ -7,7 +7,7 @@
 
     </head>
     <body>
-        <img class="center" src="{{ imageLink }}" alt="godJulText">
+        <img class="center" src="{{ url_for('static', filename=imageLink + '.png') }}" alt="godJulText">
         <div id="bilder" style="width: 100%;">
             {% for x in links %}
                 <img src="{{x}}" alt="">
