@@ -8,11 +8,11 @@ body{
     background: linear-gradient(90deg, rgba(112,0,0,1) 0%, rgba(196,0,0,1) 50%, rgba(112,0,0,1) 100%);
 }
 #allBody{
-    background-image: url("https://bit.ly/2KoAPIv");
-    background-repeat:repeat;
+    background-image: url(https://bit.ly/2KoAPIv);
+    background-repeat: repeat;
+    height: 100vh;
     display: block;
     overflow: auto;
-    
 }
 .center{
     display: block;
