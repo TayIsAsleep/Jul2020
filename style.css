@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+body{
+    background-image: url("bgr.jpg");
+    background-repeat:repeat;
+
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    height: 40%;
+
+}
+
+.bilder *{
+    float: left;
+}
