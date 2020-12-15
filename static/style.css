@@ -10,6 +10,7 @@ body{
 #allBody{
     background-image: url("https://bit.ly/2KoAPIv");
     background-repeat:repeat;
+    filter: blur(8px);
 }
 .center{
     display: block;
@@ -27,7 +28,6 @@ body{
     display:inline-block;
     width: 320px;
     height: auto;
-    filter: none;
 }
 #personalMessageText{
     text-align: center;
