@@ -4,14 +4,13 @@
         <title>God Jul {{currentName}}</title>
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
         <link rel="stylesheet" href= "{{ url_for('static',filename='style.css') }}">
-
     </head>
     <body>
-        <img class="center" src="{{ url_for('static', filename=imageLink + '.png') }}" alt="godJulText">
+        <img class="center" src="{{ url_for('static', filename=imageLink+'.png') }}" alt="godJulText">
         <div id="bilder" style="width: 100%;">
             {% for x in links %}
                 <img src="{{x}}" alt="">
-            {% end for %}
+            {% endfor %}
         </div>
     </body>
 </html>
