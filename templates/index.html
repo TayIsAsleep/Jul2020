@@ -6,7 +6,7 @@
         <link rel="stylesheet" href= "{{ url_for('static',filename='style.css') }}">
     </head>
     <body>
-        <img class="center" src="{{filename}}" alt="godJulText">
+        <img class="center" src="{{imageLink}}" alt="godJulText">
         <p id="personalMessage">{{personalMessage}}</p>
         <div id="bilder" style="width: 100%;">
             {% for x in links %}
