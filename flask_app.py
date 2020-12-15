@@ -12,7 +12,7 @@ def mamma():
 @app.route("/pappa")
 def pappa(): 
     pappaLinks = ["https://bit.ly/34h7pTI","https://bit.ly/3qWRoMa","https://bit.ly/3qZQX3Z","https://bit.ly/37m64gl","https://bit.ly/3oXvLK5","https://bit.ly/2K8Jf6K","https://bit.ly/3oXvMh7"]
-    return render_template("pappa.html",currentName = "Pappa", imageLink = url_for('static', filename='pappa.png') ,links = pappaLinks)
+    return render_template("pappa.html",currentName = "Pappa", imageLink = "pappa" ,links = pappaLinks)
 
 @app.route("/linnea")
 def linnea(): 
