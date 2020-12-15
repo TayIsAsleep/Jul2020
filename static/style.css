@@ -27,6 +27,7 @@ body{
     display:inline-block;
     width: 320px;
     height: auto;
+    filter: none;
 }
 #personalMessageText{
     text-align: center;
