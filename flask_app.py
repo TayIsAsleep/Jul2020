@@ -7,8 +7,9 @@ app = Flask(__name__)
 
 @app.route("/mamma")
 def mamma(): 
+    mammaText = "Mamma text"
     mammaLinks = []
-    return render_template("index.html", currentName="Mamma", imageLink=url_for('static', filename='mamma.png'), links=mammaLinks)
+    return render_template("index.html", currentName="Mamma", imageLink=url_for('static', filename='mamma.png'), links=mammaLinks, personalMessage=mammaText)
 
 @app.route("/pappa")
 def pappa(): 
@@ -18,13 +19,15 @@ def pappa():
 
 @app.route("/linnea")
 def linnea(): 
+    linneaText = "God Jul till bästa storasystern!"
     linneaLinks = []
-    return render_template("index.html", currentName="Linnea", imageLink=url_for('static',filename='linnea.png'), links=linneaLinks)
+    return render_template("index.html", currentName="Linnea", imageLink=url_for('static',filename='linnea.png'), links=linneaLinks, personalMessage=linneaText)
 
 @app.route("/oskar")
 def oskar(): 
+    oskarText = "Oskar Text"
     oskarLinks = []
-    return render_template("index.html", currentName="Oskar", imageLink=url_for('static',filename='oskar.png'), links=oskarLinks)
+    return render_template("index.html", currentName="Oskar", imageLink=url_for('static',filename='oskar.png'), links=oskarLinks, personalMessage=oskarText)
 
 if __name__ == "__main__":
     try:
