@@ -14,9 +14,9 @@ body{
     height: 40%;
 }
 #bilder *{
+    display:inline-block;
     width: 320px;
     height: auto;
-    display:inline-block;
 }
 #bilder{
     text-align:center;
@@ -27,6 +27,8 @@ body{
 #personalMessage{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 1px 1px black;
-    color: white;
+    font-weight: 900;
+    font-size: 25;
+    text-shadow: 4px 2px black;
+    color: white;   
 }
