@@ -6,7 +6,6 @@
 body{
     background-image: url("bgr.jpg");
     background-repeat:repeat;
-
 }
 .center{
     display: block;
@@ -15,7 +14,14 @@ body{
     height: 40%;
 
 }
-
-.bilder *{
-    float: left;
+#bilder *{
+    width: 320px;
+    height: auto;
+    display:inline-block;
+}
+#bilder{
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
