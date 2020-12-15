@@ -1,10 +1,6 @@
 from flask import Flask,render_template,request,redirect,url_for
 app = Flask(__name__)
 
-#@app.route("/")
-#def mainpage():
-#    return render_template("index.html")
-
 @app.route("/mamma")
 def mamma(): 
     mammaText = "Mamma text"
@@ -42,3 +38,4 @@ if __name__ == "__main__":
         input("ERROR : Incorrect IP")
     else:
         pass
+#Title generator : https://bit.ly/381FdFn
