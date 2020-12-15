@@ -19,7 +19,7 @@ body{
     margin-right: auto;
     text-align:center;
 }
-#bilder{
+.bilder{
     display:inline-block;
     width: 320px;
     height: auto;
