@@ -1,11 +1,11 @@
 #Title generator : https://bit.ly/381FdFn
 from flask import Flask,render_template,request,redirect,url_for
-from random import shuffle
 app = Flask(__name__)
 
 @app.route("/<linkInput>")
 def goToPage(linkInput):
     try:
+        from random import shuffle
         selected=("mamma","pappa","linnea","oskar","linneaoskar").index(linkInput)
         allText=[
             "God Jul till dig Mamma. Tack för att du står ut med mig varje dag, även om jag kan bli jobbig ibland ❤️",
