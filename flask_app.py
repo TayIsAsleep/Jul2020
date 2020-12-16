@@ -28,8 +28,10 @@ def goToPage(linkInput):
 
         import os
         #theDir = os.listdir(f"static/{linkInput}")
-        
-        raise os.getcwd()
+        class MyError(Exception):
+            pass
+
+        raise MyError(os.getcwd())
         # for filename in theDir:
         #     if filename.endswith(".png"):
         #         # print(os.path.join(directory, filename))
