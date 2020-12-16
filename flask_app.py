@@ -14,7 +14,7 @@ def main(linkInput):
             "God Jul till den bästa pappan som finns! Tack för allt du gör för mig, och för allt kul vi har gjort tillsammans genom åren. ❤️",
             "God Jul till er båda! Ni är bäst! ❤️"
         ][selected]
-        titleNames=["Mamma", "Pappa", "Linnea och Oskar"][selected]
+        titleNames=["Mamma", "Pappa", "Linnea, Oskar och Rio"][selected]
         myImages=[f"static/{linkInput}/{x}" for x in os.listdir(f"Jul2020/static/{linkInput}")]
         shuffle(myImages)
         return render_template("index.html", currentName=titleNames, titleImage=f"static/{linkInput}.png", images=myImages, personalMessage=personalText)
