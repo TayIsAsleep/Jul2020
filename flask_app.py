@@ -15,6 +15,13 @@ def goToPage(linkInput):
             "God Jul till Oskar, och tack för att du tar så bra hand om min stora-syster!",
             "Ni är bäst!"
         ]
+        allNames=[
+            "Mamma ❤️",
+            "Pappa ❤️",
+            "Linnea ❤️",
+            "Oskar ❤️",
+            "Linnea och Oskar ❤️"
+        ]
         # allImages=[
         #     ["https://bit.ly/3r0wuvV","https://bit.ly/3nphEg7","https://bit.ly/3mmh4P1","https://bit.ly/3oVWmau","https://bit.ly/37kq1nN","https://bit.ly/3qXpik3"],
         #     ["https://bit.ly/34h7pTI","https://bit.ly/3qWRoMa","https://bit.ly/3qZQX3Z","https://bit.ly/37m64gl","https://bit.ly/3oXvLK5","https://bit.ly/2K8Jf6K","https://bit.ly/3oXvMh7"],
@@ -22,16 +29,7 @@ def goToPage(linkInput):
         #     ["https://bit.ly/2LxBibD"],
         #     [f"static/{linkInput}/{x}.png"for x in range(9)] + ["https://bit.ly/2LxBibD"]
         # ]
-        allNames=[
-            "Mamma",
-            "Pappa",
-            "Linnea",
-            "Oskar",
-            "Linnea och Oskar"
-        ]
-        # for x in allImages:
-        #     shuffle(x)
-        myImages = [f"static/{linkInput}/{x}"for x in sorted(os.listdir(f"Jul2020/static/{linkInput}"),key=lambda x: int(os.path.splitext(x)[0]))] + ["https://bit.ly/2LxBibD"]
+        myImages = [f"static/{linkInput}/{x}"for x in sorted(os.listdir(f"Jul2020/static/{linkInput}"),key=lambda x: int(os.path.splitext(x)[0]))]
         shuffle(myImages)
         return render_template("index.html", currentName=allNames[selected], imageLink=url_for('static',filename=linkInput+'.png'), images=myImages, personalMessage=allText[selected])
     except Exception as e:
