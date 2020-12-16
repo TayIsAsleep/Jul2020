@@ -32,5 +32,4 @@ def goToPage(linkInput):
             shuffle(x)
         return render_template("index.html", currentName=allNames[selected], imageLink=url_for('static',filename=linkInput+'.png'), links=allImages[selected], personalMessage=allText[selected])
     except Exception as e:
-        render_template("error.html",errormessage=str(e))
-    
+        return render_template("error.html",errormessage=str(e))

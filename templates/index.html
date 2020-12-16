@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <div id="allBody" style="background-image: url(static/snow.gif);">
+        <div id="allBody">
             <img class="center" src="{{imageLink}}" alt="godJulText">
             <p id="personalMessageText">{{personalMessage}}</p>
-            <div id="bilderDiv" style="width: 90vw;">
+            <div id="bilderDiv">
                 {% for x in links %}
                     <a href="{{x}}"><img class="bilder" src="{{x}}" alt="{{x}}"></a>
                 {% endfor %}
