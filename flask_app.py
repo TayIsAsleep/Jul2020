@@ -28,10 +28,11 @@ def goToPage(linkInput):
 
         import os
         theDir = os.listdir(f"Jul2020/static/{linkInput}")
+        lsorted = sorted(theDir,key=lambda x: int(os.path.splitext(x)[0]))
         class MyError(Exception):
             pass
 
-        raise MyError(theDir)
+        raise MyError(f"{lsorted},{theDir}")
         # for filename in theDir:
         #     if filename.endswith(".png"):
         #         # print(os.path.join(directory, filename))
