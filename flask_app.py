@@ -27,7 +27,7 @@ def goToPage(linkInput):
 
 
         import os
-        theDir = os.listdir(f"static/{linkInput}/")
+        theDir = os.listdir(f"static/{linkInput}")
         
         raise theDir
         # for filename in theDir:
