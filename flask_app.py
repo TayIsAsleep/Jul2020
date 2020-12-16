@@ -21,8 +21,6 @@ def goToPage(linkInput):
             ["https://bit.ly/2LxBibD"],
             [f"static/{linkInput}/{x}.png"for x in range(9)] + ["https://bit.ly/2LxBibD"]
         ]
-        for x in allImages:
-            shuffle(x)
         allNames=[
             "Mamma",
             "Pappa",
@@ -30,6 +28,8 @@ def goToPage(linkInput):
             "Oskar",
             "Linnea och Oskar"
         ]
+        for x in allImages:
+            shuffle(x)
         return render_template("index.html", currentName=allNames[selected], imageLink=url_for('static',filename=linkInput+'.png'), links=allImages[selected], personalMessage=allText[selected])
     except Exception as e:
         render_template("error.html",errormessage=str(e))
