@@ -5,12 +5,12 @@ from random import shuffle
 import os
 app = Flask(__name__)
 Mobility(app)
-@app.after_request #Script to help prevent caching
-def after_request(response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
-    response.headers["Expires"] = 0
-    response.headers["Pragma"] = "no-cache"
-    return response
+# @app.after_request #Script to help prevent caching
+# def after_request(response):
+#     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
+#     response.headers["Expires"] = 0
+#     response.headers["Pragma"] = "no-cache"
+#     return response
 @app.route("/<linkInput>")
 def main(linkInput):
     try:

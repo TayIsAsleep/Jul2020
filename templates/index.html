@@ -8,15 +8,14 @@
     <body>
         <div id="allBody">
             {% if request.MOBILE: %}
-            <img id="titleImage" src="{{titleImage}}" alt="titleImage" style="width: 90vw;">
+            <img id="titleImage" src="{{titleImage}}" alt="titleImage" style="width: 90vw;;">
             {% else: %}
             <img id="titleImage" src="{{titleImage}}" alt="titleImage" style="height: 400px;">
             {% endif %}
-            <!--<img id="titleImage" src="{{titleImage}}" alt="titleImage">-->
             <p id="personalMessageText">{{personalMessage}}</p>
             <div id="bilderDiv">
                 {% for x in images %}
-                    <a href="{{x}}"><img class="bilder" src="{{x}}" alt="{{x}}"></a>
+                <a href="{{x}}"><img class="bilder" src="{{x}}" alt="{{x}}"></a>
                 {% endfor %}
             </div>
         </div>
