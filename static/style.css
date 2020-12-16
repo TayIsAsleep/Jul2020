@@ -12,11 +12,14 @@ body{
     background-repeat: repeat;
     min-height: 100vh;
 }
-.center{
+#titleImage{
+    {% if request.MOBILE: %}
+        width: 90vw;
+    {% else: %}
+        height: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto; 
-    height: 400px;
 }
 #bilderDiv{
     width: 90vw;
