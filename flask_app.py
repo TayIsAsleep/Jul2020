@@ -10,7 +10,7 @@ def goToPage(linkInput):
         allText=[
             "God Jul till dig Mamma. Tack för att du står ut med mig varje dag, även om jag kan bli jobbig ibland ❤️",
             "God Jul till den bästa pappan som finns! Tack för allt du gör för mig, och för allt vi har gjort genom åren. ❤️",
-            "Ni är bäst! ❤️"
+            "God Jul till er båda! Ni är bäst! ❤️"
         ]
         allNames=["Mamma", "Pappa", "Linnea och Oskar"]
         myImages=[f"static/{linkInput}/{x}" for x in os.listdir(f"Jul2020/static/{linkInput}")]
