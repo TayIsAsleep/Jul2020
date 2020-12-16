@@ -7,7 +7,12 @@
     </head>
     <body>
         <div id="allBody">
-            <img id="titleImage" src="{{titleImage}}" alt="titleImage">
+            {% if request.MOBILE: %}
+            <img id="titleImage" src="{{titleImage}}" alt="titleImage" style="width: 90vw;">
+            {% else: %}
+            <img id="titleImage" src="{{titleImage}}" alt="titleImage" style="height: 400px;">
+            {% endif %}
+            <!--<img id="titleImage" src="{{titleImage}}" alt="titleImage">-->
             <p id="personalMessageText">{{personalMessage}}</p>
             <div id="bilderDiv">
                 {% for x in images %}
