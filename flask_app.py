@@ -1,5 +1,6 @@
 #Title generator : https://bit.ly/381FdFn
 from flask import Flask,render_template,request,redirect,url_for
+from random import shuffle
 app = Flask(__name__)
 
 @app.route("/<linkInput>")
@@ -13,11 +14,11 @@ def goToPage(linkInput):
         "Ni är bäst!"
     ]
     allImages=[
-        ["https://bit.ly/3r0wuvV","https://bit.ly/3nphEg7","https://bit.ly/3mmh4P1","https://bit.ly/3oVWmau","https://bit.ly/37kq1nN","https://bit.ly/3qXpik3"],
-        ["https://bit.ly/34h7pTI","https://bit.ly/3qWRoMa","https://bit.ly/3qZQX3Z","https://bit.ly/37m64gl","https://bit.ly/3oXvLK5","https://bit.ly/2K8Jf6K","https://bit.ly/3oXvMh7"],
-        [],
-        ["https://bit.ly/2LxBibD"],
-        [f"static/{linkInput}/{x}.png"for x in range(9)] + ["https://bit.ly/2LxBibD"]
+        shuffle(["https://bit.ly/3r0wuvV","https://bit.ly/3nphEg7","https://bit.ly/3mmh4P1","https://bit.ly/3oVWmau","https://bit.ly/37kq1nN","https://bit.ly/3qXpik3"]),
+        shuffle(["https://bit.ly/34h7pTI","https://bit.ly/3qWRoMa","https://bit.ly/3qZQX3Z","https://bit.ly/37m64gl","https://bit.ly/3oXvLK5","https://bit.ly/2K8Jf6K","https://bit.ly/3oXvMh7"]),
+        shuffle([]),
+        shuffle(["https://bit.ly/2LxBibD"]),
+        shuffle([f"static/{linkInput}/{x}.png"for x in range(9)] + ["https://bit.ly/2LxBibD"])
     ]
     allNames=[
         "Mamma",

@@ -26,8 +26,6 @@ body{
 }
 .bilder{
     display:inline-block;
-    /*width: 320px;
-    height: auto;*/
     height: 400px;
     width: auto;
 }
