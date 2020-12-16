@@ -8,7 +8,8 @@ Mobility(app)
 @app.route("/<linkInput>")
 def main(linkInput):
     try:
-        selected=("mamma","pappa","linneaoskar").index(linkInput.lower())
+        linkInput = linkInput.lower()
+        selected=("mamma","pappa","linneaoskar").index(linkInput)
         personalText=[
             "God Jul till dig Mamma. Tack för att du står ut med mig varje dag, även om jag kan bli jobbig ibland. ❤️",
             "God Jul till den bästa pappan som finns! Tack för allt du gör för mig, och för allt kul vi har gjort tillsammans genom åren. ❤️",
