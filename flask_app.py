@@ -23,6 +23,6 @@ def main(linkInput):
         titleNames=["Mamma", "Pappa", "Linnea och Oskar"][selected]
         myImages=[f"static/{linkInput}/{x}" for x in os.listdir(f"Jul2020/static/{linkInput}")]
         shuffle(myImages)
-        return render_template("index.html", currentName=titleNames, titleImage=f"static/{linkInput}.png", images=myImages, personalMessage=personalText)
+        return render_template("index.html", currentName=titleNames, titleImage=f"static/{linkInput}.png", images=myImages, personalMessage=personalText,isMobile=request.MOBILE)
     except Exception as e:
         return render_template("error.html", errormessage=str(e))

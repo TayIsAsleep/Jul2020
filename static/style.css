@@ -13,7 +13,7 @@ body{
     min-height: 100vh;
 }
 #titleImage{
-    {% if request.MOBILE: %}
+    {% if isMobile: %}
         width: 90vw;
     {% else: %}
         height: 400px;
