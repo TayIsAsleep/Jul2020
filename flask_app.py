@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/<linkInput>")
 def goToPage(linkInput):
     try:
-        #from random import shuffle
+        from random import shuffle
         selected=("mamma","pappa","linnea","oskar","linneaoskar").index(linkInput)
         allText=[
             "God Jul till dig Mamma. Tack för att du står ut med mig varje dag, även om jag kan bli jobbig ibland ❤️",
@@ -21,6 +21,8 @@ def goToPage(linkInput):
             ["https://bit.ly/2LxBibD"],
             [f"static/{linkInput}/{x}.png"for x in range(9)] + ["https://bit.ly/2LxBibD"]
         ]
+        for x in allImages:
+            shuffle(x)
         allNames=[
             "Mamma",
             "Pappa",
