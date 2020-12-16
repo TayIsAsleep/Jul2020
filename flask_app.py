@@ -17,8 +17,13 @@ def goToPage(linkInput):
         ["https://bit.ly/34h7pTI","https://bit.ly/3qWRoMa","https://bit.ly/3qZQX3Z","https://bit.ly/37m64gl","https://bit.ly/3oXvLK5","https://bit.ly/2K8Jf6K","https://bit.ly/3oXvMh7"],
         [],
         ["https://bit.ly/2LxBibD"],
-        ["IMG_0093.png",url_for('static',filename="IMG_0095.png")]
+        [f"static/{linkInput}/{x}.png"for x in range(9)]
+        #["static/IMG_0093.png",url_for('static',filename="IMG_0095.png")]
     ]
+
+    
+
+
     allNames=[
         "Mamma",
         "Pappa",
