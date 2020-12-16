@@ -1,5 +1,6 @@
 #Title generator : https://bit.ly/381FdFn
 from flask import Flask,render_template,request,redirect,url_for
+import os
 app = Flask(__name__)
 
 @app.route("/<linkInput>")
@@ -16,6 +17,10 @@ def goToPage(linkInput):
         ]
         
 
+        
+        #imageNames = sorted(os.listdir(f"Jul2020/static/{linkInput}"),key=lambda x: int(os.path.splitext(x)[0]))
+
+        myImages = [f"static/{linkInput}/{x}"for x in sorted(os.listdir(f"Jul2020/static/{linkInput}"),key=lambda x: int(os.path.splitext(x)[0]))] + ["https://bit.ly/2LxBibD"]
 
         allImages=[
             ["https://bit.ly/3r0wuvV","https://bit.ly/3nphEg7","https://bit.ly/3mmh4P1","https://bit.ly/3oVWmau","https://bit.ly/37kq1nN","https://bit.ly/3qXpik3"],
@@ -26,13 +31,16 @@ def goToPage(linkInput):
         ]
 
 
-        import os
-        theDir = os.listdir(f"Jul2020/static/{linkInput}")
-        lsorted = sorted(theDir,key=lambda x: int(os.path.splitext(x)[0]))
-        class MyError(Exception):
-            pass
+        
+        
 
-        raise MyError(f"{lsorted},{theDir}")
+
+
+        
+        # class MyError(Exception):
+        #     pass
+        # raise MyError(f"{lsorted},{theDir}")
+
         # for filename in theDir:
         #     if filename.endswith(".png"):
         #         # print(os.path.join(directory, filename))
@@ -49,6 +57,6 @@ def goToPage(linkInput):
         ]
         for x in allImages:
             shuffle(x)
-        return render_template("index.html", currentName=allNames[selected], imageLink=url_for('static',filename=linkInput+'.png'), links=allImages[selected], personalMessage=allText[selected])
+        return render_template("index.html", currentName=allNames[selected], imageLink=url_for('static',filename=linkInput+'.png'), images=myImages, personalMessage=allText[selected])
     except Exception as e:
         return render_template("error.html",errormessage=str(e))
