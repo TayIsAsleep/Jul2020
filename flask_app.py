@@ -20,4 +20,4 @@ def main(linkInput):
         shuffle(myImages)
         return render_template("index.html", currentName=titleNames, titleImage=f"static/{linkInput}.png", images=myImages, personalMessage=personalText)
     except Exception as e:
-        return render_template("error.html", errormessage=str(e))
+        return render_template("error.html", errorMessage=str(e))
